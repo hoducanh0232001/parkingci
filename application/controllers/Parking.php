@@ -87,13 +87,13 @@ class Parking extends Admin_Controller
 		    		redirect('parking/', 'refresh');	
         		}
         		else {
-        			$this->session->set_flashdata('errors', 'Error occurred!!');
+        			$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!!');
 	        		redirect('parking/create', 'refresh');
         		}
         		
         	}
         	else {
-        		$this->session->set_flashdata('errors', 'Error occurred!!');
+        		$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!!');
         		redirect('parking/create', 'refresh');
         	}
         }
@@ -148,17 +148,17 @@ class Parking extends Admin_Controller
 	        		$update_slot = $this->model_slots->updateSlotAvailability($slot_data, $this->input->post('parking_slot'));
 
 	        		if($update_parking_data == true && $update_slot == true) {
-	        			$this->session->set_flashdata('success', 'Successfully created');
+	        			$this->session->set_flashdata('success', 'Tạo thành công');
 			    		redirect('parking/', 'refresh');	
 	        		}
 	        		else {
-	        			$this->session->set_flashdata('errors', 'Error occurred!!');
+	        			$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!!');
 		        		redirect('parking/create', 'refresh');
 	        		}
 	        		
 	        	}
 	        	else {
-	        		$this->session->set_flashdata('errors', 'Error occurred!!');
+	        		$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!!');
 	        		redirect('parking/create', 'refresh');
 	        	}
 	        }
@@ -202,11 +202,11 @@ class Parking extends Admin_Controller
 
 				$delete = $this->model_parking->delete($id);
 				if($delete == true) {
-	        		$this->session->set_flashdata('success', 'Successfully removed');
+	        		$this->session->set_flashdata('success', 'Đã xoá thành công');
 	        		redirect('parking/', 'refresh');
 	        	}
 	        	else {
-	        		$this->session->set_flashdata('error', 'Error occurred!!');
+	        		$this->session->set_flashdata('error', 'Đã có lỗi xảy ra!!');
 	        		redirect('parking/delete/'.$id, 'refresh');
 	        	}	
 			}	
@@ -300,11 +300,11 @@ class Parking extends Admin_Controller
 			// getting the parking data 
 			$updatePayment = $this->model_parking->updatePayment($id, $this->input->post('payment_status'));
 			if($updatePayment == true) {
-    			$this->session->set_flashdata('success', 'Successfully updated');
+    			$this->session->set_flashdata('success', 'Đã cập nhật thành công');
 	    		redirect('parking/', 'refresh');	
     		}
     		else {
-    			$this->session->set_flashdata('payment_error', 'Error occurred!!');
+    			$this->session->set_flashdata('payment_error', 'Đã có lỗi xảy ra!!');
         		redirect('parking/edit/'.$id, 'refresh');
     		}
 		}

@@ -66,11 +66,11 @@ class Users extends Admin_Controller
 
         	$create = $this->model_users->create($data, $this->input->post('groups'));
         	if($create == true) {
-        		$this->session->set_flashdata('success', 'Successfully created');
+        		$this->session->set_flashdata('success', 'Tạo thành công');
         		redirect('users/', 'refresh');
         	}
         	else {
-        		$this->session->set_flashdata('errors', 'Error occurred!!');
+        		$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!!');
         		redirect('users/create', 'refresh');
         	}
         }
@@ -120,11 +120,11 @@ class Users extends Admin_Controller
 
 		        	$update = $this->model_users->edit($data, $id, $this->input->post('groups'));
 		        	if($update == true) {
-		        		$this->session->set_flashdata('success', 'Successfully created');
+		        		$this->session->set_flashdata('success', 'Tạo thành công');
 		        		redirect('users/', 'refresh');
 		        	}
 		        	else {
-		        		$this->session->set_flashdata('errors', 'Error occurred!!');
+		        		$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!!');
 		        		redirect('users/edit/'.$id, 'refresh');
 		        	}
 		        }
@@ -148,11 +148,11 @@ class Users extends Admin_Controller
 
 			        	$update = $this->model_users->edit($data, $id, $this->input->post('groups'));
 			        	if($update == true) {
-			        		$this->session->set_flashdata('success', 'Successfully updated');
+			        		$this->session->set_flashdata('success', 'Đã cập nhật thành công');
 			        		redirect('users/', 'refresh');
 			        	}
 			        	else {
-			        		$this->session->set_flashdata('errors', 'Error occurred!!');
+			        		$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!!');
 			        		redirect('users/edit/'.$id, 'refresh');
 			        	}
 					}
@@ -201,11 +201,11 @@ class Users extends Admin_Controller
 				
 					$delete = $this->model_users->delete($id);
 					if($delete == true) {
-		        		$this->session->set_flashdata('success', 'Successfully removed');
+		        		$this->session->set_flashdata('success', 'Đã xoá thành công');
 		        		redirect('users/', 'refresh');
 		        	}
 		        	else {
-		        		$this->session->set_flashdata('error', 'Error occurred!!');
+		        		$this->session->set_flashdata('error', 'Đã có lỗi xảy ra!!');
 		        		redirect('users/delete/'.$id, 'refresh');
 		        	}
 
@@ -264,11 +264,11 @@ class Users extends Admin_Controller
 
 		        	$update = $this->model_users->edit($data, $id);
 		        	if($update == true) {
-		        		$this->session->set_flashdata('success', 'Successfully updated');
+		        		$this->session->set_flashdata('success', 'Đã cập nhật thành công');
 		        		redirect('users/setting/', 'refresh');
 		        	}
 		        	else {
-		        		$this->session->set_flashdata('errors', 'Error occurred!!');
+		        		$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!!');
 		        		redirect('users/setting/', 'refresh');
 		        	}
 		        }
@@ -292,11 +292,11 @@ class Users extends Admin_Controller
 
 			        	$update = $this->model_users->edit($data, $id, $this->input->post('groups'));
 			        	if($update == true) {
-			        		$this->session->set_flashdata('success', 'Successfully updated');
+			        		$this->session->set_flashdata('success', 'Đã cập nhật thành công');
 			        		redirect('users/setting/', 'refresh');
 			        	}
 			        	else {
-			        		$this->session->set_flashdata('errors', 'Error occurred!!');
+			        		$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!!');
 			        		redirect('users/setting/', 'refresh');
 			        	}
 					}

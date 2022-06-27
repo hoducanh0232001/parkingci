@@ -63,11 +63,11 @@ class Rates extends Admin_Controller
 
         	$create = $this->model_rates->create($data);
         	if($create == true) {
-        		$this->session->set_flashdata('success', 'Successfully created');
+        		$this->session->set_flashdata('success', 'Tạo thành công');
         		redirect('rates/', 'refresh');
         	}
         	else {
-        		$this->session->set_flashdata('errors', 'Error occurred!!');
+        		$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!!');
         		redirect('rates/create', 'refresh');
         	}
         }
@@ -106,11 +106,11 @@ class Rates extends Admin_Controller
 
 	        	$update = $this->model_rates->edit($data, $id);
 	        	if($update == true) {
-	        		$this->session->set_flashdata('success', 'Successfully updated');
+	        		$this->session->set_flashdata('success', 'Đã cập nhật thành công');
 	        		redirect('rates/', 'refresh');
 	        	}
 	        	else {
-	        		$this->session->set_flashdata('errors', 'Error occurred!!');
+	        		$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!!');
 	        		redirect('rates/edit/'.$id, 'refresh');
 	        	}
 	        }
@@ -147,11 +147,11 @@ class Rates extends Admin_Controller
 				// else {
 					$delete = $this->model_rates->delete($id);
 					if($delete == true) {
-		        		$this->session->set_flashdata('success', 'Successfully removed');
+		        		$this->session->set_flashdata('success', 'Đã xoá thành công');
 		        		redirect('rates/', 'refresh');
 		        	}
 		        	else {
-		        		$this->session->set_flashdata('error', 'Error occurred!!');
+		        		$this->session->set_flashdata('error', 'Đã có lỗi xảy ra!!');
 		        		redirect('rates/delete/'.$id, 'refresh');
 		        	}
 				// }	

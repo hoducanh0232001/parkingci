@@ -53,10 +53,10 @@ class Slots extends Admin_Controller
 
 			$create = $this->model_slots->create($data);
 			if ($create == true) {
-				$this->session->set_flashdata('success', 'Successfully created');
+				$this->session->set_flashdata('success', 'Tạo thành công');
 				redirect('slots/', 'refresh');
 			} else {
-				$this->session->set_flashdata('errors', 'Error occurred!!');
+				$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!!');
 				redirect('slots/create', 'refresh');
 			}
 		} else {

@@ -46,11 +46,11 @@ class Groups extends Admin_Controller
 
         	$create = $this->model_groups->create($data);
         	if($create == true) {
-        		$this->session->set_flashdata('success', 'Successfully created');
+        		$this->session->set_flashdata('success', 'Tạo thành công');
         		redirect('groups/', 'refresh');
         	}
         	else {
-        		$this->session->set_flashdata('errors', 'Error occurred!!');
+        		$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!!');
         		redirect('groups/create', 'refresh');
         	}
         }
@@ -82,11 +82,11 @@ class Groups extends Admin_Controller
 
 	        	$update = $this->model_groups->edit($data, $id);
 	        	if($update == true) {
-	        		$this->session->set_flashdata('success', 'Successfully updated');
+	        		$this->session->set_flashdata('success', 'Đã cập nhật thành công');
 	        		redirect('groups/', 'refresh');
 	        	}
 	        	else {
-	        		$this->session->set_flashdata('errors', 'Error occurred!!');
+	        		$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!!');
 	        		redirect('groups/edit/'.$id, 'refresh');
 	        	}
 	        }
@@ -116,11 +116,11 @@ class Groups extends Admin_Controller
 				else {
 					$delete = $this->model_groups->delete($id);
 					if($delete == true) {
-		        		$this->session->set_flashdata('success', 'Successfully removed');
+		        		$this->session->set_flashdata('success', 'Đã xoá thành công');
 		        		redirect('groups/', 'refresh');
 		        	}
 		        	else {
-		        		$this->session->set_flashdata('error', 'Error occurred!!');
+		        		$this->session->set_flashdata('error', 'Đã có lỗi xảy ra!!');
 		        		redirect('groups/delete/'.$id, 'refresh');
 		        	}
 				}	

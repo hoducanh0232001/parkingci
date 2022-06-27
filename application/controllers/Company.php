@@ -34,10 +34,10 @@ class Company extends Admin_Controller
 
         	$update = $this->model_company->edit($data, $company_id);
         	if($update == true) {
-        		$this->session->set_flashdata('success', 'Successfully updated');
+        		$this->session->set_flashdata('success', 'Đã cập nhật thành công');
         	}
         	else {
-        		$this->session->set_flashdata('errors', 'Error occurred!!');
+        		$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!!');
         	}
 
         	redirect('company/', 'refresh');
