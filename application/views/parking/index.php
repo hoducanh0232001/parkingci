@@ -94,8 +94,8 @@
                     <td><?php
                         echo $company_currency . '' . $v['rate']['rate']; ?></td>
                     <td><?php echo $v['slot']['slot_name']; ?></td>
-                    <td><?php echo $v['parking']['total_time'] . 'Tiếng';
-                        echo ($v['parking']['total_time'] > 1) ? 's' : ''; ?></td>
+                    <td><?php echo $v['parking']['total_time'] . ' Tiếng';
+                        // echo ($v['parking']['total_time'] > 1) ? 's' : ''; ?></td>
                     <td><?php echo $company_currency . '' . ($v['parking']['earned_amount']) ?: '-'; ?></td>
                     <td><?php echo ($v['parking']['paid_status'] == 1) ? '<label class="label label-success" style="font-size:12px;">Paid</label>' : '<label class="label label-danger">Not Paid</label>'; ?></td>
                     <?php if (in_array('updateParking', $user_permission) || in_array('deleteParking', $user_permission) || in_array('viewParking', $user_permission)) : ?>
@@ -110,6 +110,7 @@
                           <?php if (in_array('viewParking', $user_permission)) : ?>
                             <!-- <a onclick="printParking(<?php echo "'" . base_url('parking/printInvoice/' . $v['parking']['id']) . "'"; ?>)" class="btn btn-primary"><i class="fa fa-print"></i></a> -->
                             <a href="<?php echo base_url('parking/printInvoice/' . $v['parking']['id']) ?>" class="btn btn-primary"><i class="fa fa-print"></i></a>
+                            <!-- <a onclick="printParking(<?php echo "'" . base_url('parking/printInvoice/' . $v['parking']['id']) . "'"; ?>)" class="btn btn-primary"><i class="fa fa-print"></i></a> -->
                           <?php endif; ?>
                         </div>
                       </td>

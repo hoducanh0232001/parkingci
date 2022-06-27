@@ -231,6 +231,7 @@ class Parking extends Admin_Controller
 
 			// get the vehicle type 
 			$vehicle_category = $this->model_category->getCategoryData($parking_data['vechile_cat_id']);
+			$slot_place= $this->model_slots->getSlotData($parking_data['slot_id']);;
 
 			$check_in_date = date("Y-m-d", $parking_data['in_time']);
 			$check_in = date("h:i a", $parking_data['in_time']);
@@ -268,11 +269,13 @@ class Parking extends Admin_Controller
 									<td>Loại phương tiện: '.ucwords($vehicle_category['name']).' </td>
 								</tr>
 								<tr>
-									<td>Vị trí: '.$parking_data['parking_code'].' </td>
+									<td>Mã gửi xe: '.$parking_data['parking_code'].' </td>
+									<td>Vị trí: '.$slot_place['slot_name'].' </td>
 								</tr>
 							</table>
 
 							<p> Để thuận tiện, xin đừng làm mất vé. </p>
+							
 						</div>
 						<div class="parking-message">
 							'.$company_info['message'].'

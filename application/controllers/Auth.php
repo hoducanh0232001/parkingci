@@ -50,7 +50,7 @@ class Auth extends Admin_Controller
            		}
            	}
            	else {
-           		$this->data['errors'] = 'Email does not exists';
+           		$this->data['errors'] = 'Email không tồn tại';
 
            		$this->load->view('login', $this->data);
            	}	
