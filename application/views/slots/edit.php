@@ -46,10 +46,17 @@
                   <input type="text" class="form-control" id="slot_name" name="slot_name" placeholder="Tên vị trí gửi xe" value="<?php echo ($this->input->post('slot_name'))?:$slot_data['slot_name']; ?>">
                 </div>
                 <div class="form-group">
+                  <label for="group_name">Sạc điện</label>
+                  <select class="form-control" id="vehicle_electric_id" name="vehicle_electric_id">
+                    <option value="1" <?php echo ($slot_data['vehicle_electric_id'] == 1) ? 'selected':''; ?>>Có</option>
+                    <option value="2" <?php echo ($slot_data['vehicle_electric_id'] == 2) ? 'selected':''; ?>>Không</option>
+                  </select>
+                  <br /> <br />
+                <div class="form-group">
                   <label for="group_name">Trạng thái</label>
                   <select class="form-control" id="status" name="status">
-                    <option value="1" <?php echo ($slot_data['active'] == 1) ? 'selected':''; ?>>Active</option>
-                    <option value="2" <?php echo ($slot_data['active'] == 2) ? 'selected':''; ?>>Inactive</option>
+                    <option value="1" <?php echo ($slot_data['active'] == 1) ? 'selected':''; ?>>Có </option>
+                    <option value="2" <?php echo ($slot_data['active'] == 2) ? 'selected':''; ?>>Không</option>
                   </select>
                 </div>
                 

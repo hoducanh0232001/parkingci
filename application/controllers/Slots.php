@@ -24,6 +24,7 @@ class Slots extends Admin_Controller
 		}
 
 
+
 		$slot_data = $this->model_slots->getSlotData();
 		$this->data['slot_data'] = $slot_data;
 
@@ -45,6 +46,7 @@ class Slots extends Admin_Controller
 			// true case
 			$data = array(
 				'slot_name' => $this->input->post('slot_name'),
+				'vehicle_electric_id' => $this->input->post('vehicle_electric_id'),
 				'active' => $this->input->post('status'),
 				'availability_status' => 1
 			);
@@ -76,16 +78,17 @@ class Slots extends Admin_Controller
 				// true case
 				$data = array(
 					'slot_name' => $this->input->post('slot_name'),
+					'vehicle_electric_id' => $this->input->post('vehicle_electric_id'),
 					'active' => $this->input->post('status'),
 					'availability_status' => 1
 				);
 
 				$update = $this->model_slots->edit($data, $id);
 				if ($update == true) {
-					$this->session->set_flashdata('success', 'Successfully updated');
+					$this->session->set_flashdata('success', 'Sửa thành công');
 					redirect('slots/', 'refresh');
 				} else {
-					$this->session->set_flashdata('errors', 'Error occurred!!');
+					$this->session->set_flashdata('errors', 'Đã có lỗi xảy ra!');
 					redirect('slots/edit/' . $id, 'refresh');
 				}
 			} else {
@@ -114,10 +117,10 @@ class Slots extends Admin_Controller
 				// else {
 				$delete = $this->model_slots->delete($id);
 				if ($delete == true) {
-					$this->session->set_flashdata('success', 'Successfully removed');
+					$this->session->set_flashdata('success', 'Xóa thành công');
 					redirect('slots/', 'refresh');
 				} else {
-					$this->session->set_flashdata('error', 'Error occurred!!');
+					$this->session->set_flashdata('error', 'Lỗi đã xảy ra!!');
 					redirect('slots/delete/' . $id, 'refresh');
 				}
 				// }	

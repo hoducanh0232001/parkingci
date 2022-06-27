@@ -64,10 +64,10 @@ class Parking extends Admin_Controller
         	$data = array(
         		'parking_code' => $parking_code,
         		'vechile_cat_id' => $this->input->post('vehicle_cat'),
+				'vehicle_electric_id' =>0, //16:57
         		'rate_id' => $this->input->post('vehicle_rate'),
         		'slot_id' => $this->input->post('parking_slot'),
         		'in_time' => strtotime('now'),
-				'vehicle_electric_id' =>0,
         		'paid_status' => 0
         	);
 

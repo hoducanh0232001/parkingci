@@ -89,7 +89,7 @@
 
                         ?></td>
                     <td><?php echo $v['category']['name']; ?></td>
-                    <td><?php echo $v['parking']['vehicle_electric_id'];?></td>
+                    <td><?php echo ($v['parking']['vehicle_electric_id'] == 1) ? '<label class="label label-success" style="font-size:12px;">Có</label>' : '<label class="label label-danger">Không</label>';?></td>
                     <td><?php echo $v['rate']['rate_name']; ?></td>
                     <td><?php
                         echo $company_currency . '' . $v['rate']['rate']; ?></td>

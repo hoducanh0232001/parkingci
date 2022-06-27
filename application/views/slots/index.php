@@ -46,6 +46,7 @@
                 <tr>
                   <th>Tên vị trí</th>
                   <th>Trạng thái</th>
+                  <th>Sạc điện</th>
                   <th>Sẵn có</th>
                   <?php if (in_array('updateSlots', $user_permission) || in_array('deleteSlots', $user_permission)) : ?>
                     <th>Hành động</th>
@@ -65,10 +66,17 @@
                       <?php } ?>
                     </td>
                     <td>
+                      <?php if ($v['vehicle_electric_id'] == 1) { ?>
+                        <span class="label label-success">Có</span>
+                      <?php } else { ?>
+                        <span class="label label-danger">Không</span>
+                      <?php } ?>
+                    </td>
+                    <td>
                       <?php if ($v['availability_status'] == 1) { ?>
                         <span class="label label-success">Có sẵn</span>
                       <?php } else { ?>
-                        <span class="label label-danger">Đã gửi</span>
+                        <span class="label label-danger">Đang gửi</span>
                       <?php } ?>
                     </td>
                     <?php if (in_array('updateSlots', $user_permission) || in_array('deleteSlots', $user_permission)) : ?>
