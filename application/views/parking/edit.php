@@ -61,17 +61,7 @@
                   <?php endforeach ?>
                 </select>
               </div>
-              <div class="form-group">
-                <label for="group_name">Sạc điện</label>
-                <select class="form-control" id="vehicle_electric_id" name="vehicle_electric_id">
-                  <option value="">~~Chọn~~</option>
-                  <?php foreach ($vehicle_electric_id as $k => $v) : ?>
-                    <option value="<?php echo $v['id'] ?>" <?php if ($save_parking_data['vehicle_electric_id'] == $v['id']) {
-                                                              echo "selected";
-                                                            } ?>><?php echo $v['name_elec'] ?></option>
-                  <?php endforeach ?>
-                </select>
-              </div>
+      
               <div class="form-group">
                 <label for="group_name">Lệ Phí</label>
                 <select class="form-control" id="vehicle_rate" name="vehicle_rate">

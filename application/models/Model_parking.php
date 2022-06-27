@@ -47,7 +47,7 @@ class Model_parking extends CI_Model
 	/*
 	 update the payment information for the parking
 	 gets the parking data from the id and 
-	 caculate the difference time 
+	 calculate the difference time 
 	 checks if the rate is based on the hourly or fixed rate
 	*/
 	public function updatePayment($id, $payment_status) 

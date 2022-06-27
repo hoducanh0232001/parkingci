@@ -32,6 +32,7 @@ class Parking extends Admin_Controller
 		foreach ($parking_data as $k => $v) {
 			$result[$k]['parking'] = $v;
 			$category_data = $this->model_category->getCategoryData($v['vechile_cat_id']);
+			// $vehicle_electric_id = $this ->model_slots->getSlotData($v['vehicle_electric_id']);
 			$slot_data = $this->model_slots->getSlotData($v['slot_id']);
 			$rate_data = $this->model_rates->getRateData($v['rate_id']);
 
@@ -64,7 +65,7 @@ class Parking extends Admin_Controller
         	$data = array(
         		'parking_code' => $parking_code,
         		'vechile_cat_id' => $this->input->post('vehicle_cat'),
-				'vehicle_electric_id' =>0, //16:57
+				// 'vehicle_electric_id' => $this->input->post('vehicle_electric_id'), //16
         		'rate_id' => $this->input->post('vehicle_rate'),
         		'slot_id' => $this->input->post('parking_slot'),
         		'in_time' => strtotime('now'),

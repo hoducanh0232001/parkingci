@@ -47,7 +47,7 @@
                 </div>
                 <div class="form-group">
                   <label for="group_name">Sạc điện</label>
-                  <select class="form-control" id="status" name="status">
+                  <select class="form-control" id="vehicle_electric_id" name="vehicle_electric_id">
                     <option value="1">Có</option>
                     <option value="2">Không</option>
                   </select>
@@ -55,8 +55,8 @@
                 <div class="form-group">
                   <label for="group_name">Trạng thái</label>
                   <select class="form-control" id="status" name="status">
-                    <option value="1">Có</option>
-                    <option value="2">Không</option>
+                    <option value="1">Trống</option>
+                    <option value="2">Không có sẵn</option>
                   </select>
                 </div>
                 

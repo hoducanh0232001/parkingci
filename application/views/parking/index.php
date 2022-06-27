@@ -49,7 +49,7 @@
                   <th>Thời gian ra</th>
                   <th>Loại phương tiện</th>
                   <th>Sạc điện</th>
-                  <th>Tên lệ phí</th>
+                  <th>Tên vé xe</th>
                   <th>Lệ phí</th>
                   <th>Chỗ</th>
                   <th>Tổng thời gian</th>
@@ -89,12 +89,12 @@
 
                         ?></td>
                     <td><?php echo $v['category']['name']; ?></td>
-                    <td><?php echo ($v['parking']['vehicle_electric_id'] == 1) ? '<label class="label label-success" style="font-size:12px;">Có</label>' : '<label class="label label-danger">Không</label>';?></td>
+                    <td><?php echo ($v['slot']['vehicle_electric_id'] == 1) ? '<label class="label label-success" style="font-size:12px;">Có</label>' : '<label class="label label-danger">Không</label>';?></td>
                     <td><?php echo $v['rate']['rate_name']; ?></td>
                     <td><?php
                         echo $company_currency . '' . $v['rate']['rate']; ?></td>
                     <td><?php echo $v['slot']['slot_name']; ?></td>
-                    <td><?php echo $v['parking']['total_time'] . ' hour';
+                    <td><?php echo $v['parking']['total_time'] . 'Tiếng';
                         echo ($v['parking']['total_time'] > 1) ? 's' : ''; ?></td>
                     <td><?php echo $company_currency . '' . ($v['parking']['earned_amount']) ?: '-'; ?></td>
                     <td><?php echo ($v['parking']['paid_status'] == 1) ? '<label class="label label-success" style="font-size:12px;">Paid</label>' : '<label class="label label-danger">Not Paid</label>'; ?></td>
