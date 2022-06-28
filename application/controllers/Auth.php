@@ -12,6 +12,7 @@ class Auth extends Admin_Controller
 		$this->load->model('model_auth');
 	}
 	// I wrote everything in this file in english to i have better writing skills
+	// i hope everything ok
 	/* 
 		Check if the login form is submitted, and validates the user credential
 		If not submitted it redirects to the login page
